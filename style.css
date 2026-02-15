@@ -1,0 +1,150 @@
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#e79aa0;
+    font-family:Arial, sans-serif;
+    overflow:hidden;
+}
+
+/* Floating Hearts */
+.floating-heart{
+    position:absolute;
+    bottom:-50px;
+    font-size:26px;
+    animation:floatUp linear infinite;
+    opacity:0.8;
+}
+
+@keyframes floatUp{
+    from{
+        transform:translateY(0);
+        opacity:1;
+    }
+    to{
+        transform:translateY(-110vh);
+        opacity:0;
+    }
+}
+
+/* Container */
+.container{
+    text-align:center;
+    position:relative;
+    z-index:10;
+}
+
+/* Teddy */
+.teddy{
+    position:relative;
+    width:220px;
+    height:220px;
+    background:#8b5e3c;
+    border-radius:50%;
+    margin:auto;
+}
+
+.ear{
+    position:absolute;
+    width:90px;
+    height:90px;
+    background:#8b5e3c;
+    border-radius:50%;
+    top:-35px;
+}
+
+.ear.left{ left:-25px; }
+.ear.right{ right:-25px; }
+
+.eye{
+    position:absolute;
+    width:22px;
+    height:22px;
+    background:black;
+    border-radius:50%;
+    top:85px;
+}
+
+.eye.left{ left:65px; }
+.eye.right{ right:65px; }
+
+.eyebrow{
+    position:absolute;
+    width:45px;
+    height:6px;
+    background:black;
+    top:70px;
+}
+
+.eyebrow.left{
+    left:55px;
+    transform:rotate(-20deg);
+}
+
+.eyebrow.right{
+    right:55px;
+    transform:rotate(20deg);
+}
+
+.sad-mouth{
+    position:absolute;
+    width:80px;
+    height:50px;
+    border-top:6px solid black;
+    border-radius:80px 80px 0 0;
+    top:130px;
+    left:70px;
+}
+
+/* Heart */
+.heart{
+    position:relative;
+    width:260px;
+    height:230px;
+    margin:50px auto;
+    transform:rotate(-45deg);
+    background:red;
+}
+
+.heart::before,
+.heart::after{
+    content:"";
+    position:absolute;
+    width:260px;
+    height:230px;
+    background:red;
+    border-radius:50%;
+}
+
+.heart::before{
+    top:-130px;
+    left:0;
+}
+
+.heart::after{
+    left:130px;
+    top:0;
+}
+
+.heart-text{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%) rotate(45deg);
+    color:white;
+    font-size:38px;
+    font-weight:900;
+    letter-spacing:3px;
+    text-align:center;
+    text-shadow:3px 3px 10px rgba(0,0,0,0.7);
+    z-index:10;
+}
+
+h1{
+    color:white;
+    font-size:36px;
+    font-weight:bold;
+    text-shadow:3px 3px 10px rgba(0,0,0,0.6);
+}
